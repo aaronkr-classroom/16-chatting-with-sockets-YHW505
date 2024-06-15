@@ -63,7 +63,7 @@ These files will need to be updated to complete the assignment. / 이 파일들�
     - /views/chat.ejs + /app.js `(2/2)`
     - /public/js/bookFunctions.js `(2/2)`
   - [lesson-31](./lesson-31) (apiRoutes + Bootstrap modal)
-    - /routes/apiRoutes.js `(2/2)`
+    - /controller/chatController `(2/2)`
     - /models/Message.js `(2/2)`
     - /public/js/joinFunctions.js `(2/2)`
   - [lesson-32](./lesson-32) (CREATE + READ)
