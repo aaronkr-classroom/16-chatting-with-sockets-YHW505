@@ -16,7 +16,7 @@ $(document).ready(() => {
     let text = $("#chat-input").val(); // Lesson 31.1 (p. 450)
     let userId = $("#chat-user-id").val(); // Lesson 31.4 (p. 452)
     let userFullName = $("#chat-user-full-name").val(); // Lesson 31.7 (p. 455)
-    let username = $("#chat-username").val();
+    let username = $("#chat-username").val()
     socket.emit("message", {
       content: text, // Lesson 31.1 (p. 450)
       userId: userId, // Lesson 31.4 (p. 452)
@@ -31,7 +31,7 @@ $(document).ready(() => {
    * Listing 32.3 (p. 467)
    * 메시지 수신 시 채팅 아이콘 애니메이팅
    */
-  socket.on("message", () => {
+  socket.on("message", message => {
     displayMessage(message);
     for (let i = 0;i < 2; i ++) {
       $(".chat-icon").fadeOut(200).fadeIn(200);
@@ -54,12 +54,12 @@ $(document).ready(() => {
    * Listing 31.12 (p. 460)
    * 최근 메시지 표시
    */
-  socket.on("load all messages", (data) => {
-    data.forEach((message) => {
-      displayMessage(message);
-    });
-    console.log(data);
-  });
+  // socket.on("message", (data) => {
+  //   data.forEach((message) => {
+  //     displayMessage(message);
+  //   });
+  //   console.log(data);
+  // });
 
   $("#modal-button").click(() => {
     $(".modal-body").html("");
